@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        window.onload = function(){
+            window.alert(1)
+            window.prompt(2)
+            window.confirm(3)
+
+            var timer1 = setTimeout(function(){
+                console.log(window.location)
+                clearInterval(time2)
+            },10000)
+
+            var time2 = setInterval(function(){
+                console.log(new Date().toLocaleDateString())
+            },1000)
+
+            console.log(window.navigator)
+        }
+
+        window.onunload = function(){
+            window.alert("离开")
+        }
+    </script>
+</body>
+</html>

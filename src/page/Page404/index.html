@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>404页面未找到</title>
+    ${require('raw-loader!./../public/dependence.html')}
+</head>
+<body>
+<div id="container" class="cls-container">
+    <!-- HEADER -->
+    <!--===================================================-->
+    <div class="cls-header">
+        <div class="cls-brand">
+            <a class="box-inline" href="index.html">
+                <!-- <img alt="Nifty Admin" src="images/logo.png" class="brand-icon"> -->
+                <span class="brand-title">Electric<span class="text-thin">Manager</span></span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- CONTENT -->
+    <!--===================================================-->
+    <div class="cls-content">
+        <h1 class="error-code text-mint">404</h1>
+        <p class="h3">Page Not Found</p>
+        <div class="pad-btm">
+            Sorry, but the page you are looking for has not been found on our server.
+        </div>
+        <div class="row mar-ver">
+            <div class="col-lg-4 col-lg-offset-4">
+                <button class="btn btn-mint btn-block" onclick="history.back(1)">Back to Homepage</button>
+            </div>
+        </div>
+        <hr class="new-section-sm bord-no">
+    </div>
+    
+
+</div>
+<!--===================================================-->
+<!-- END OF CONTAINER -->
+</body>
+</html>

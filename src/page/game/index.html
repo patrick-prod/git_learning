@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>APPLES</title>
+    <style>
+        body,html,ul,ol,div{
+            user-select: none;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            text-decoration: none;
+            font-family: Mouse;
+            margin-block-start:0;
+            margin-block-end: 0;
+        }
+        @font-face {
+            font-family: Mouse;
+            src: url("./../src/page/game/assets/font/Mouse.otf");
+        }
+        .gm_title{
+            font:normal 700 85px/50px Mouse;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+
+        .gm_score{
+            font:normal 700 80px/40px Mouse;
+            margin: 40px;
+            text-align: center;
+        }
+
+        .gm_life{
+            width: 170px;
+            height: 35px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .gm_life li,img{
+            width: 40px;
+        }
+        
+        .gm_box{
+            position: relative;
+            width: 800px;
+            height: 450px;
+            margin-top: 40px;
+            border: 10px solid black;
+
+        }
+
+        .gm_box > p{
+            height: fit-content;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto auto;
+            font-size: 16px;
+        }
+
+        @keyframes shake {
+            0% {
+                opacity: 10;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .shake {
+            animation: shake 1.2s infinite;
+        }
+    </style>
+</head>
+<body onselectstart="return false;" unselectable="on">
+    <h1 class="gm_title" id="gm_title">Tap To Play</h1>
+
+    <h1 class="gm_score" id="gm_score">0</h1>
+
+    <ul class="gm_life" id="gm_life">
+        <li>
+            <img src="./../src/page/game/assets/img/life.png" alt="生命值" ondragstart="return false;">
+        </li>
+        <li>
+            <img src="./../src/page/game/assets/img/life.png" alt="生命值" ondragstart="return false;"> 
+        </li>
+        <li>
+            <img src="./../src/page/game/assets/img/life.png" alt="生命值" ondragstart="return false;">
+        </li>
+    </ul>
+
+    <div class="gm_box" id="gm_box">
+        <p id="gm_tip">press "<span class="shake">space</span>" to start</p>
+    </div>
+</body>
+</html>

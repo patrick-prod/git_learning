@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户列表</title>
+    ${require('raw-loader!./../public/dependence.html')}
+    <!--DataTables [ OPTIONAL ]-->
+    <!-- 表格样式依赖 -->
+    <link href="/assets/plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
+	<link href="/assets/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+    <!--表格插件-->
+    <script src="/assets/plugins/datatables/media/js/jquery.dataTables.js"></script>
+	<script src="/assets/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+    <script src="/assets/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    <link href="/assets/plugins/fooTable/css/footable.core.css" rel="stylesheet">
+    <script src="/assets/plugins/fooTable/dist/footable.all.min.js"></script>
+</head>
+<body>
+    <div id="container" class="effect aside-float aside-bright mainnav-lg">
+        
+        <!--NAVBAR--
+        <!--===================================================-->
+        ${require('raw-loader!./../public/header.html')}
+        <!--===================================================-->
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                
+                <!--Page Title-->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow">系统设置</h1>
+                </div>
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--End page title-->
+
+
+                <!--Breadcrumb-->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <ol class="breadcrumb">
+					<li><a href="/index.html">Home</a></li>
+					<li class="active">Configs</li>
+                </ol>
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--End breadcrumb-->
+
+
+        
+
+                <!--Page content-->
+                <!--===================================================-->
+                <div id="page-content">
+					<div class="row">
+					    <div class="col-lg-12">
+					        <div class="panel">
+					            <div class="panel-heading">
+					                <h3 class="panel-title">修改系统状态和设置</h3>
+					            </div>
+					            <!-- BASIC FORM ELEMENTS -->
+					            <!--===================================================-->
+					            <form class="panel-body form-horizontal form-padding">
+                                    <h3 class="text-main text-bold col-xs-offset-2 ">基本设置</h3>
+                                    <br>
+					                <!--Static-->
+					                <div class="form-group">
+					                    <label class="col-md-3 control-label">系统状态</label>
+					                    <div class="col-md-6"><p class="form-control-static"><span class="label label-success">运行中</span></p></div>
+					                </div>
+
+                    			    <div class="form-group">
+					                    <label class="col-md-3 control-label">系统名称</label>
+                                        <div class="col-md-6">
+					                        <input type="text" id="demo-text-input" class="form-control" value="凌海电力支付对接系统">
+					                    </div>
+					                </div>
+
+					                <!--Text Input-->
+					                <div class="form-group">
+					                    <label class="col-md-3 control-label" for="demo-text-input">服务器ip</label>
+					                    <div class="col-md-6">
+					                        <input type="text" id="demo-text-input" class="form-control" value="10.100.10.255">
+					                    </div>
+					                </div>
+					
+					                <!--Email Input-->
+					                <div class="form-group">
+					                    <label class="col-md-3 control-label" for="demo-email-input">服务器端口号</label>
+					                    <div class="col-md-6">
+					                        <input type="email" id="demo-email-input" class="form-control" value="4403">
+					                    </div>
+					                </div>
+                                    <!--Readonly Input-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="demo-password-input">分页</label>
+                                        <div class="col-md-1">
+                                            <input id="demo-panel-w-switch" class="toggle-switch" type="checkbox" checked="">
+                                            <label for="demo-panel-w-switch"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="demo-password-input">单页数据量</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="demo-password-input" class="form-control" value="20">
+                                        </div>
+                                    </div>
+                                    <!--Password-->
+                                    <!-- <hr class="new-section-sm bord-no">
+                                    <p class="text-main text-bold col-lg-offset-3">字典设置</p> -->
+                                    <!-- <h3 class="text-main text-bold col-xs-offset-2 ">字典设置</h3> -->
+                                    <br>
+					                <div class="form-group">
+					                    <label class="col-md-3 control-label"></label>
+					                    <div class="col-md-2">
+					                        <button class="pull-left btn btn-success btn-block">
+					                        确定
+					                        </button>
+					                    </div>
+					                </div>
+					            </form>
+					            <!--===================================================-->
+					            <!-- END BASIC FORM ELEMENTS -->
+					
+					
+					        </div>
+					    </div>
+					</div>
+					
+					
+                </div>
+                <!--===================================================-->
+                <!--End page content-->
+
+
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+            
+            <!--MAIN NAVIGATION-->
+            <!--===================================================-->
+            ${require('raw-loader!./../public/aside.html')}
+            <!--===================================================-->
+            <!--END MAIN NAVIGATION-->
+
+        </div>
+
+        
+
+        <!-- FOOTER -->
+        <!--===================================================-->
+        ${require('raw-loader!./../public/footer.html')}
+        <!--===================================================-->
+        <!-- END FOOTER -->
+    </div>
+</body>
+</html>
+
