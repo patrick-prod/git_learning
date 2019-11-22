@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户列表</title>
+    ${require('raw-loader!./../public/dependence.html')}
+
+
+    <!-- 表格样式依赖 -->
+    <link href="/assets/plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
+	<link href="/assets/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+    <!--表格插件-->
+    <script src="/assets/plugins/datatables/media/js/jquery.dataTables.js"></script>
+	<script src="/assets/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+    <script src="/assets/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    <link href="/assets/plugins/fooTable/css/footable.core.css" rel="stylesheet">
+    <script src="/assets/plugins/fooTable/dist/footable.all.min.js"></script>
+</head>
+<body>
+    <div id="container" class="effect aside-float aside-bright mainnav-lg">
+        
+        <!--NAVBAR--
+        <!--===================================================-->
+        ${require('raw-loader!./../public/header.html')}
+        <!--===================================================-->
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                <!--Page Title-->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow" id="list">用户列表</h1>
+                </div>
+
+                <ol class="breadcrumb">
+					<li><a href="#">主页</a></li>
+					<li class="active">用户列表</li>
+                </ol>
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--End page title-->
+
+                <!--Page content-->
+                <!--===================================================-->
+                <div id="page-content">
+					<div class="panel">
+					    <div class="panel-heading">
+					        <h3 class="panel-title">用户列表</h3>
+					    </div>
+                        
+					    <!-- Foo Table - Add & Remove Rows -->
+					    <!--===================================================-->
+					    <div class="panel-body">
+					        <table id="demo-foo-addrow" class="table table-bordered table-hover toggle-circle" data-page-size="7">
+					            <thead>
+					                <tr>
+					                    <th data-sort-ignore="true" class="min-width"></th>
+                                        <th data-sort-initial="true" data-toggle="true">用户名</th>
+                                        <th data-hide="phone, tablet">登录账号</th>
+					                    <th data-hide="phone, tablet">电话</th>
+					                    <th>权限等级</th>
+					                    <th data-hide="phone, tablet">登陆时间</th>
+                                        <th data-hide="phone, tablet">状态</th>
+                                        <th data-hide="phone, tablet">登录ip</th>
+					                </tr>
+					            </thead>
+					            <div class="pad-btm form-inline">
+					                <div class="row">
+					                    <div class="col-sm-6 text-xs-center">
+					                        <div class="form-group">
+                                                <button id="demo-btn-addrow" class="btn btn-purple"><i class="demo-pli-plus"></i> 添加</button>
+					                        </div>
+					                    </div>
+					                    <div class="col-sm-6 text-xs-center text-right">
+					                        <div class="form-group">
+					                            <input id="demo-input-search2" type="text" placeholder="Search" class="form-control" autocomplete="off">
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>
+					            <tbody>
+					                <tr data-uid = "2">
+					                    <td><button class="demo-delete-row btn btn-danger btn-xs"><i class="demo-pli-cross"></i></button></td>
+                                        <td>本杰明</td>
+                                        <td>8939330581</td>
+					                    <td>1304589123</td>
+					                    <td><span class="label label-table label-success">超级管理员</span></td>
+					                    <td>22 Jun 1972</td>
+                                        <td><span class="label label-table label-warning">禁用</span></td>
+                                        <td>127.0.0.1</td>
+                                    </tr>
+					            </tbody>
+					        </table>
+					    </div>
+					    <!--===================================================-->
+					    <!-- End Foo Table - Add & Remove Rows -->
+					
+					</div>	
+                </div>
+                <!--===================================================-->
+                <!--End page content-->
+
+
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+            
+            <!--MAIN NAVIGATION-->
+            <!--===================================================-->
+            ${require('raw-loader!./../public/aside.html')}
+            <!--===================================================-->
+            <!--END MAIN NAVIGATION-->
+
+        </div>
+
+        
+
+        <!-- FOOTER -->
+        <!--===================================================-->
+        ${require('raw-loader!./../public/footer.html')}
+        <!--===================================================-->
+        <!-- END FOOTER -->
+    </div>
+</body>
+</html>
+
